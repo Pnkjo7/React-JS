@@ -1,9 +1,10 @@
 
+import { Fragment } from 'react'
 import ItemList from './ItemList'
 
 const Content = ({ items, handleCheck, handleDelete }) => {
     return (
-        <main>
+        <>
             {items.length ? (
                 <ItemList item={items}
                     handleCheck={handleCheck}
@@ -13,7 +14,7 @@ const Content = ({ items, handleCheck, handleDelete }) => {
             ) : (
                 <p style={{ marginTop: '2rem' }}>Your list empty.</p>
             )}
-        </main >
+        </>
     )
 
 }
