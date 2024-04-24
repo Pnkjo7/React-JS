@@ -1,13 +1,13 @@
-const apiRequest = async (url = '', optionObj = null, errMsg = null)=>{
-    try{
+const apiRequest = async (url = '', optionObj = null, errMsg = null) => {
+    try {
 
         const response = await fetch(url, optionObj);
-        if (!response.ok) throw Error('Please reaload the app')
+        if (!response.ok) throw Error('Please reload the app')
 
-    }catch(err){
+    } catch (err) {
         errMsg = err.message;
 
-    }finally{
+    } finally {
         return errMsg;
 
     }
